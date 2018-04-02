@@ -1,12 +1,11 @@
-SRCS=bb_gemm.c
+SRCS=spmm_dense_csr_csc.c
 
-ACCEL_NAME = bb_gemm
+ACCEL_NAME = spmm_dense_csr_csc
 TEST_BIN = $(ACCEL_NAME)
 export TRACE_OUTPUT_DIR=$(ACCEL_NAME)
 ifndef WORKLOAD
-  export WORKLOAD=bb_gemm
+  export WORKLOAD=spmm_dense_csr_csc
 endif
-
 include ../common/Makefile.common
 include ../common/Makefile.tracer
 

@@ -49,7 +49,7 @@ CACTI_OBJ_FILES = $(patsubst %.o,$(CACTI_OBJ_DIR)/%.o,$(CACTI_OBJS))
 
 CPPFLAGS = -I$(BOOST_ROOT) -I$(BOOST_ROOT)/include -I$(ALADDIN_HOME) -Icacti-p
 CFLAGS += -g $(BITWIDTH) -std=c++11 $(CPPFLAGS)
-LFLAGS += -L$(BOOST_ROOT)/lib -lz -lboost_graph -lboost_regex -lpthread
+LFLAGS += -L$(BOOST_ROOT)/lib -lz -L/mnt/d/Acads-Cornell/Meetings-Zhiru-Chris/Aladdin/boost_1_55_0/stage/lib -lboost_graph -lboost_regex -lpthread
 
 ifeq ($(HAS_READLINE),1)
   CFLAGS += -DHAS_READLINE
@@ -79,7 +79,7 @@ $(EXE): obj_dir $(CACTI_OBJ_FILES) $(OBJ_FILES)
 	$(CXX)  $(BITWIDTH) -o $(EXE) $(EXE).o $(OBJ_FILES) $(CACTI_OBJ_FILES) $(LFLAGS)
 
 $(OBJ_DIR)/%.o : %.h %.cpp
-	$(CXX) $(CFLAGS) -Werror -Wall $(WARNING_EXCEPTIONS) -o $@ -c $*.cpp
+	$(CXX) $(CFLAGS) -Wall $(WARNING_EXCEPTIONS) -o $@ -c $*.cpp
 
 $(CACTI_OBJ_DIR)/%.o : $(CACTI_DIR)/%.cc
 	$(CXX) $(CFLAGS)  -DNTHREADS=$(NTHREADS) -o $@ -c $(CACTI_DIR)/$*.cc

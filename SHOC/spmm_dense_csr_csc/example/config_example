@@ -1,0 +1,10 @@
+partition,cyclic,A0,16384,4,64
+partition,cyclic,A12_pos,260,4,64
+partition,cyclic,A22_pos,260,4,64
+partition,cyclic,A12_idx,8064,4,64
+partition,cyclic,A22_idx,8024,4,64
+partition,cyclic,A1_vals,8064,4,64
+partition,cyclic,A2_vals,8024,4,64
+unrolling,spmm_dense_csr_csc,inner,1
+pipelining,1
+cycle_time,6

@@ -1,0 +1,150 @@
+     ________
+    /\ ____  \    ___   _       ___  ______ ______  _____  _   _
+   /  \    \  |  / _ \ | |     / _ \ |  _  \|  _  \|_   _|| \ | |
+  / /\ \    | | / /_\ \| |    / /_\ \| | | || | | |  | |  |  \| |
+ | |  | |   | | |  _  || |    |  _  || | | || | | |  | |  | . ` |
+ \ \  / /__/  | | | | || |____| | | || |/ / | |/ /  _| |_ | |\  |
+  \_\/_/ ____/  \_| |_/\_____/\_| |_/|___/  |___/  |_____|\_| \_/
+
+
+-------------------------------
+      Starts Aladdin
+-------------------------------
+spmm_dense_csr_csc,../dynamic_trace.gz,config_example,
+-------------------------------
+      Setting ScratchPad
+-------------------------------
+-------------------------------
+      Generating DDDG
+-------------------------------
+-------------------------------
+Num of Nodes: 5095464
+Num of Edges: 12351638
+Num of Reg Edges: 7256175
+Num of MEM Edges: 0
+Num of Control Edges: 5095463
+-------------------------------
+-------------------------------
+    Initializing BaseDatapath
+-------------------------------
+ Top level: spmm_dense_csr_csc
+=============================================
+      Optimizing...            spmm_dense_csr_csc
+=============================================
+-------------------------------
+  Remove PHI and Convert Nodes
+-------------------------------
+  Removing 4410068 edges.
+  Adding 3534661 new edges.
+  Removing 674922 isolated nodes.
+-------------------------------
+  Remove Induction Dependence
+-------------------------------
+-------------------------------
+       Init Base Address
+-------------------------------
+-------------------------------
+     Init DMA Base Address
+-------------------------------
+-------------------------------
+        Mem to Reg Conv
+-------------------------------
+-------------------------------
+      ScratchPad Partition
+-------------------------------
+-------------------------------
+         Loop Flatten
+-------------------------------
+  Removing 0 isolated nodes.
+  Removing 0 isolated nodes.
+-------------------------------
+         Loop Unrolling
+-------------------------------
+  Adding 6940514 new edges.
+  Removing 0 isolated nodes.
+  Removing 0 isolated nodes.
+-------------------------------
+          Load Buffer
+-------------------------------
+  Adding 0 new edges.
+  Removing 0 edges.
+  Removing 0 isolated nodes.
+-------------------------------
+          Store Buffer
+-------------------------------
+  Adding 0 new edges.
+  Removing 0 isolated nodes.
+  Removing 0 isolated nodes.
+-------------------------------
+    Remove Repeated Stores
+-------------------------------
+-------------------------------
+      Memory Ambiguation
+-------------------------------
+  Adding 0 new edges.
+-------------------------------
+     Tree Height Reduction
+-------------------------------
+  Removing 0 edges.
+  Adding 0 new edges.
+  Removing 0 isolated nodes.
+-------------------------------
+  Fuse register loads/stores
+-------------------------------
+  Removing 0 edges.
+  Adding 0 new edges.
+  Removing 0 isolated nodes.
+-------------------------------
+   Fuse consecutive branches
+-------------------------------
+  Removing 0 edges.
+  Adding 0 new edges.
+  Removing 0 isolated nodes.
+-------------------------------
+      Per Loop Pipelining
+-------------------------------
+-------------------------------
+         Loop Pipelining
+-------------------------------
+  Adding 3406098 new edges.
+  Removing 3777836 edges.
+  Removing 0 isolated nodes.
+=============================================
+      Scheduling...            spmm_dense_csr_csc
+=============================================
+  Total connected nodes: 3567296
+  Total edges: 15294052
+=============================================
+ Current power model supports trig functions running at 10 ns.
+ Cycle time: 6 is not supported yet. Use 10ns power model instead.
+===============================
+        Aladdin Results
+===============================
+Running : spmm_dense_csr_csc
+Top level function: spmm_dense_csr_csc
+Cycle : 207666 cycles
+Avg Power: 7.45026 mW
+Idle FU Cycles: 10900 cycles
+Avg FU Power: 1.60769 mW
+Avg FU Dynamic Power: 1.47846 mW
+Avg FU leakage Power: 0.129232 mW
+Avg MEM Power: 5.84257 mW
+Avg MEM Dynamic Power: 0.218483 mW
+Avg MEM Leakage Power: 5.62409 mW
+Total Area: 388627 uM^2
+FU Area: 11225.9 uM^2
+MEM Area: 377401 uM^2
+Num of Multipliers (32-bit): 1
+Num of Adders (32-bit): 3
+Num of Bit-wise Operators (32-bit): 2
+Num of Shifters (32-bit): 1
+Num of Registers (32-bit): 30
+===============================
+        Aladdin Results
+===============================
+-------------------------------
+      Generating DDDG
+-------------------------------
+-------------------------------
+Reached end of trace.
+-------------------------------

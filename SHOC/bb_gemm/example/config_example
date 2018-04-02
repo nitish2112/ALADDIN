@@ -1,0 +1,6 @@
+partition,cyclic,x,16384,4,2
+partition,cyclic,y,16384,4,2
+partition,cyclic,z,16384,4,2
+unrolling,bb_gemm,loopj,16
+pipelining,1
+cycle_time,6
